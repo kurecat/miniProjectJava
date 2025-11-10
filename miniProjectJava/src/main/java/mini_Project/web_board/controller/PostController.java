@@ -33,6 +33,5 @@ public class PostController {
         return "postlist";
     }
 
-//    @GetMapping("/list/{post_id}")
-//    public String showPost();
+
 }

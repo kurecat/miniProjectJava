@@ -11,10 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Slf4j
 @RequestMapping("/member")
 public class MemberController {
-
-
-
-
     @GetMapping("createMember")
     public String createMember() {
         return "main";
