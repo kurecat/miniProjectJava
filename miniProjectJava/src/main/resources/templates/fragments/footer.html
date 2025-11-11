@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        footer {
-width: 100%;
-background-color: #a98c71;
-padding: 30px;
-text-align: center;
-color: white;
-}
-    </style>
-</head>
-
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <body>
-<footer>
-    footer
+
+<footer class="main-footer" th:fragment="footer">
+
+    <div class="footer-content">
+
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">꿀팁</a></li>
+                <li><a href="#">질문</a></li>
+                <li><a href="#">후기</a></li>
+                <li><a href="#">잡담</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-Copyright">
+            <p class="copyright">© 2025 Company, Inc. All rights reserved.</p>
+        </div>
+        <div class="footer-info">
+            <div class="footer-logo">
+                <a th:href="@{/}"><img th:src="@{/Image/logo.png}" alt="Agit 로고" /></a>
+            </div>
+        </div>
+
+    </div>
 </footer>
+
 </body>
 </html>
