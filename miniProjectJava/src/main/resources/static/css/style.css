@@ -1,0 +1,146 @@
+.container {
+  width: 1200px;
+  height: auto;
+  border: 1px solid black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: #f9f9f9; /* 배경 확인용 */
+}
+
+/* --- 전체 헤더 --- */
+.main-header {
+  width: 1140px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* --- 1. 상단 헤더 (H70) --- */
+.header-top {
+  display: flex;
+  justify-content: space-between; /* 요소들을 양쪽 끝과 중앙에 배치 */
+  align-items: center;
+  height: 70px; /* 이미지에서 H70 */
+  padding: 0 20px; /* 좌우 여백 */
+}
+
+/* --- 좌측: 검색창 --- */
+.search-container {
+  position: relative; /* 아이콘 위치 기준 */
+}
+
+.search-container input {
+  /* 요청사항: W 250, H 30, 모서리 반경 5 */
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  padding-right: 30px; /* 아이콘 자리 확보 */
+  font-size: 14px;
+}
+
+.search-container .search-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+}
+
+/* --- 중앙: 로고 --- */
+.logo-container {
+  flex: 1;
+  text-align: center;
+}
+
+.logo-container img {
+  height: 40px; /* 이미지 크기에 맞게 조절 */
+  vertical-align: middle; /* 이미지 정렬 */
+}
+
+/* --- 우측: 사용자 메뉴 --- */
+.user-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 아이템 사이 간격 */
+}
+
+.user-icon {
+  /* 요청사항: 원 W30 H30 */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* 원으로 만들기 */
+  background-color: #d9d9d9; /* 임시 배경색 */
+  /* 실제로는 background-image: url('user-avatar.jpg'); 사용 */
+  background-size: cover;
+  background-position: center;
+}
+
+.message-icon {
+  /* 요청사항: 편지지 박스 W30 H30 */
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 3px; /* 이미지와 유사하게 살짝 둥글게 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signout-btn {
+  /* 요청사항: W 65, H 30, 모서리 반경 5 */
+  width: 65px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signout-btn:hover {
+  background-color: #f5f5f5;
+}
+
+/* --- 2. 하단 네비게이션 (H35) --- */
+.header-nav {
+  height: 35px; /* 이미지에서 H35 */
+  display: flex;
+  align-items: center;
+  padding: 0 20px; /* 상단과 동일한 좌측 여백 */
+  border-top: 1px solid #e0e0e0; /* 상단 영역과의 구분선 */
+}
+
+.header-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 50px; /* 메뉴 간 간격 */
+}
+
+.header-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header-nav ul li a:hover {
+  color: #000;
+  font-weight: bold;
+}
