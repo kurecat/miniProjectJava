@@ -1,52 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" th:href="@{/css/main.css}" />
-    <title>header</title>
-
-    <style>
-  header {
-  width: 100%;
-}
-
-.header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  height: 70px;
-}
-
-.logo {
-  font-size: 36px;
-  font-weight: bold;
-  color: #a98c71;
-}
-
-.top-center-box {
-  width: 300px;
-  height: 50px;
-  background-color: #dcdcdc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  color: #555;
-}
-    </style>
-</head>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <body>
-<header>
+
+<header class="main-header" th:fragment="header">
+
     <div class="header-top">
-       <a th:href="@{/}"><h1 class="logo">AjiteU</h1></a>
-        <div class="top-center-box">(W 300 H 50)</div>
+
+        <div class="search-container">
+            <input type="search" placeholder="검색" />
+            <button class="search-icon">⚲</button>
+        </div>
+
+        <div class="logo-container">
+           <a th:href="@{/}"><img th:src="@{/Image/logo.png}" alt="Agit 로고" /></a>
+        </div>
+
+        <div class="user-container">
+            <div class="user-icon"></div>
+            <div class="message-icon">✉️</div>
+            <button class="signout-btn">Sign out</button>
+        </div>
     </div>
-    <nav class="main-nav">
+
+    <nav class="header-nav">
         <ul>
-            <li><a th:href="@{/board/list}">게시판</a></li>
-            <li><a href="#">설문조사</a></li>
-            <li><a th:href="@{/board/write}">글쓰기</a></li>
+            <li><a href="#">꿀팁</a></li>
+            <li><a href="#">질문</a></li>
+            <li><a href="#">후기</a></li>
+            <li><a href="#">잡담</a></li>
         </ul>
     </nav>
 </header>

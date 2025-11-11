@@ -4,9 +4,6 @@ package mini_Project.web_board.dto;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- * write.html 폼과 컨트롤러 간의 데이터 전송을 위한 DTO (Data Transfer Object)
- */
 @Getter
 @Setter
 public class PostFormDto {
