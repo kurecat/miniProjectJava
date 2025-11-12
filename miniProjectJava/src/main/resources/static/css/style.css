@@ -562,3 +562,73 @@ footer-Copyright {
   justify-content: flex-end; /* 우측 정렬 */
   text-align: right;
 }
+
+.postlist {
+  width: 800px;
+  height: 1000px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.postlist button {
+  width: 55px;
+  height: 40px;
+  margin: 5px;
+}
+
+.postlistright {
+  width: 310px;
+  height: 1000px;
+  border: 1px solid black;
+  margin-left: 30px;
+}
+
+.bastpostlist {
+  width: 555px;
+  height: 400px;
+  border: 1px solid black;
+  margin-top: 30px;
+}
+
+.goodpostlist {
+  width: 555px;
+  height: 400px;
+  border: 1px solid black;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.ntwrvsbox {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.numberbox {
+  width: 60px;
+}
+
+.titlebox {
+  width: 440px;
+}
+
+.writer {
+  width: 100px;
+}
+
+.regdate {
+  width: 80px;
+}
+
+.views {
+  width: 60px;
+}
+
+.suggest {
+  width: 60px;
+}
+
+.postlistnumber {
+}
