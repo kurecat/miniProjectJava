@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <title>비밀번호 찾기</title>
+  </head>
+  <body>
+    <div class="container">
+      <div th:replace="~{fragments/header :: header}"></div>
+
+      <div class="reset-form">
+        <h2 class="reset-form__title">Reset Password</h2>
+        <p class="reset-form__subtitle">Enter your Email address</p>
+
+        <form id="reset-form" action="/reset-password" method="post" novalidate>
+          <div class="reset-form__group">
+            <label for="email" class="reset-form__label">Email*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="reset-form__input"
+              placeholder="Email address"
+              required
+            />
+          </div>
+
+          <div class="reset-form__group password-group hidden">
+            <label for="password" class="reset-form__label">Password*</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="reset-form__input"
+              placeholder="Password"
+            />
+          </div>
+
+          <div class="reset-form__group password-group hidden">
+            <label for="password-check" class="reset-form__label"
+              >Password check*</label
+            >
+            <input
+              type="password"
+              id="password-check"
+              name="password-check"
+              class="reset-form__input"
+              placeholder="Password check"
+            />
+          </div>
+
+          <button type="submit" class="reset-form__button">
+            reset password
+          </button>
+        </form>
+      </div>
+
+      <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
+    <script>
+      // 1. 페이지 로딩이 완료되면 이 함수를 실행합니다.
+      document.addEventListener("DOMContentLoaded", function () {
+        // 2. 필요한 HTML 요소들을 가져옵니다.
+        const emailInput = document.getElementById("email");
+        const passwordGroups = document.querySelectorAll(".password-group");
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // 이메일 정규식
+
+        // 3. (서버 검증 실패 대비)
+        //    페이지가 로드될 때, 이메일이 유효하게 채워져 있거나
+        //    비밀번호/비번확인 쪽에 오류가 있다면 (이메일은 통과했다는 뜻)
+        //    비밀번호 필드를 미리 보여줍니다.
+        const hasEmailError =
+          document.querySelector('[th\\:errors="*{email}"]') !== null;
+        const hasPasswordError =
+          document.querySelector('[th\\:errors="*{password}"]') !== null ||
+          document.querySelector('[th\\:errors="*{passwordCheck}"]') !== null;
+
+        if ((emailInput.value !== "" && !hasEmailError) || hasPasswordError) {
+          passwordGroups.forEach((group) => group.classList.remove("hidden"));
+        }
+
+        // 4. 이메일 입력창에서 포커스를 잃었을 때 (blur)
+        emailInput.addEventListener("blur", function () {
+          // 만약 이메일 값이 유효한 형식이면:
+          if (emailRegex.test(emailInput.value)) {
+            // 비밀번호 필드를 보여줍니다.
+            passwordGroups.forEach((group) => group.classList.remove("hidden"));
+          }
+          else {
+            // 그렇지 않다면 (비어있거나 '지우면', 또는 형식이 틀리면)
+            // 비밀번호 필드를 다시 숨깁니다.
+            passwordGroups.forEach((group) => group.classList.add("hidden"));
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

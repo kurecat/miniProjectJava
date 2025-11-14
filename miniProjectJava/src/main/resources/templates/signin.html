@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <title>login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div th:replace="~{fragments/header :: header}"></div>
+      <div class="login-wrapper">
+        <form th:action="@{/signin}" method="post">
+          <h2>Please Sign in</h2>
+
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Email address"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+
+          <div class="options">
+            <label>
+              <input
+                type="checkbox"
+                name="remember-me"
+                id="remember-me"
+              />Remember me
+            </label>
+
+            <div class="right-links">
+              <a href="/findpw">forget PW?</a>
+              <span class="separator">|</span> <a href="/signup">Sign Up</a>
+            </div>
+          </div>
+          <button type="submit" class="btn-signin">Sign in</button>
+        </form>
+      </div>
+      <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
+  </body>
+</html>

@@ -45,7 +45,6 @@
                 >
               </div>
             </div>
-
             <div class="swiper-slide">
               <img
                 src="https://via.placeholder.com/1140x400/2ecc71/ffffff?text=Slide+3"
@@ -53,179 +52,195 @@
               />
             </div>
           </div>
-
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
         </div>
-        <div class="max-w-screen-xl mx-auto">
-          <div class="flex flex-col md:flex-row gap-8">
-            <div class="w-full md:w-[800px] flex-shrink-0">
-              <div class="flex gap-4 border-b-2 border-red-500 mb-4">
-                <button
-                  class="pb-2 px-2 border-b-2 border-red-500 font-bold text-red-500"
-                >
-                  전체
-                </button>
-                <button class="pb-2 px-2 text-gray-600 hover:text-black">
-                  꿀팁
-                </button>
-                <button class="pb-2 px-2 text-gray-600 hover:text-black">
-                  질문
-                </button>
-                <button class="pb-2 px-2 text-gray-600 hover:text-black">
-                  후기
-                </button>
-                <button class="pb-2 px-2 text-gray-600 hover:text-black">
-                  잡담
-                </button>
-              </div>
-
-              <div id="postListView">
-                <table class="w-full text-center text-sm text-gray-700">
-                  <thead class="table-header">
-                    <tr class="row-height">
-                      <th class="col-number">번호</th>
-                      <th class="col-title text-left pl-4">제목</th>
-                      <th class="col-author">글쓴이</th>
-                      <th class="col-date">등록일</th>
-                      <th class="col-views">조회</th>
-                      <th class="col-likes">추천</th>
-                    </tr>
-                  </thead>
-                  <tbody id="postTableBody" class="table-body bg-white"></tbody>
-                </table>
-
-                <div
-                  id="pagination"
-                  class="flex justify-center items-center gap-2 md:gap-3 text-sm md:text-base mt-6 text-gray-600"
-                >
-                  <a href="#" class="page-nav px-1 hover:text-black"
-                    >&lt;&lt;</a
-                  >
-                  <a href="#" class="page-link active" data-page="1">1</a>
-                  <a href="#" class="page-link" data-page="2">2</a>
-                  <a href="#" class="page-link" data-page="3">3</a>
-                  <a href="#" class="page-link" data-page="4">4</a>
-                  <a href="#" class="page-link" data-page="5">5</a>
-                  <a href="#" class="page-link" data-page="6">6</a>
-                  <a href="#" class="page-link" data-page="7">7</a>
-                  <a href="#" class="page-link" data-page="8">8</a>
-                  <a href="#" class="page-link" data-page="9">9</a>
-                  <a href="#" class="page-link" data-page="10">10</a>
-                  <a href="#" class="page-nav px-1 hover:text-black"
-                    >&gt;&gt;</a
-                  >
-                </div>
-              </div>
-
-              <div
-                id="postDetailView"
-                class="hidden bg-white p-6 md:p-8 rounded-lg shadow"
-              >
-                <h2 id="detailTitle" class="text-2xl font-bold mb-2"></h2>
-                <div classs="text-sm text-gray-500 mb-4">
-                  <span id="detailAuthor"></span> |
-                  <span id="detailDate"></span> | 조회
-                  <span id="detailViews"></span> | 추천
-                  <span id="detailLikes"></span>
-                </div>
-                <hr class="my-4" />
-                <div
-                  id="detailContent"
-                  class="min-h-[200px] text-gray-800 leading-relaxed"
-                ></div>
-                <hr class="my-4" />
-                <button
-                  id="backToListButton"
-                  class="bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
-                >
-                  목록으로
-                </button>
-              </div>
-
-              <div class="flex flex-col gap-8 mt-12">
-                <div class="bottom-section-box">
-                  <div class="hot-post-header">
-                    <span class="font-bold">제일 🔥 HOT한 게시글!</span>
-                    <div class="header-columns">
-                      <span class="bottom-title-col">제목</span>
-                      <span class="bottom-count-col">댓글</span>
-                    </div>
-                  </div>
-                  <ul class="hot-post-body">
-                    <li>
-                      <span class="bottom-title-col"
-                        >실수령 200인데 월세 50 어떰 ▣</span
-                      >
-                      <span class="bottom-count-col">471</span>
-                    </li>
-                    <li>
-                      <span class="bottom-title-col"
-                        >오늘 점심 메뉴 추천받는다</span
-                      >
-                      <span class="bottom-count-col">320</span>
-                    </li>
-                    <li>
-                      <span class="bottom-title-col"
-                        >개발자 3년차 이직 고민...</span
-                      >
-                      <span class="bottom-count-col">298</span>
-                    </li>
-                    <li>
-                      <span class="bottom-title-col"
-                        >주말에 다들 뭐하시나요?</span
-                      >
-                      <span class="bottom-count-col">155</span>
-                    </li>
-                    <li>
-                      <span class="bottom-title-col"
-                        >요즘 재밌는 게임 없나</span
-                      >
-                      <span class="bottom-count-col">102</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="bottom-section-box">
-                  <div class="hot-post-header">
-                    <span class="font-bold">추천 UP!</span>
-                    <div class="header-columns">
-                      <span class="bottom-title-col">제목</span>
-                      <span class="bottom-count-col">추천</span>
-                    </div>
-                  </div>
-                  <ul class="hot-post-body">
-                    <li>
-                      <span class="bottom-title-col"
-                        >닭가슴살 뭐 먹어야함?</span
-                      >
-                      <span class="bottom-count-col">90</span>
-                    </li>
-                    <li>
-                      <span class="bottom-title-col">이 코트 어때보여?</span>
-                      <span class="bottom-count-col">72</span>
-                    </li>
-                    <li>
-                      <span class="bottom-title-col">퇴사합니다.</span>
-                      <span class="bottom-count-col">65</span>
-                    </li>
-                    <li>
-                      <span class="bottom-title-col">부산 2박3일 여행코스</span>
-                      <span class="bottom-count-col">44</span>
-                    </li>
-                    <li>
-                      <span class="bottom-title-col"
-                        >100만원대 노트북 추천</span
-                      >
-                      <span class="bottom-count-col">39</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+        <div class="postlist">
+          <button>전체</button>
+          <button>꿀팁</button>
+          <button>질문</button>
+          <button>후기</button>
+          <button>잡담</button>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">번호</p>
+            <p class="titlebox">제목</p>
+            <p class="writer">글쓴이</p>
+            <p class="regdate">등록일</p>
+            <p class="views">조회</p>
+            <p class="suggest">추천</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">1</p>
+            <p class="titlebox">ㅁㄴㅇ</p>
+            <p class="writer">ㅁㄴㅇ</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">0</p>
+            <p class="suggest">0</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">2</p>
+            <p class="titlebox">ㅁㄴㅇ</p>
+            <p class="writer">ㅁㄴㅇ</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">0</p>
+            <p class="suggest">0</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">3</p>
+            <p class="titlebox">ㅁㄴㅇ</p>
+            <p class="writer">ㅁㄴㅇ</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">0</p>
+            <p class="suggest">0</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">0</p>
+            <p class="titlebox">test</p>
+            <p class="writer">test</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">test</p>
+            <p class="suggest">test</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">0</p>
+            <p class="titlebox">test</p>
+            <p class="writer">test</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">test</p>
+            <p class="suggest">test</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">0</p>
+            <p class="titlebox">test</p>
+            <p class="writer">test</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">test</p>
+            <p class="suggest">test</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">0</p>
+            <p class="titlebox">test</p>
+            <p class="writer">test</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">test</p>
+            <p class="suggest">test</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">0</p>
+            <p class="titlebox">test</p>
+            <p class="writer">test</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">test</p>
+            <p class="suggest">test</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">0</p>
+            <p class="titlebox">test</p>
+            <p class="writer">test</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">test</p>
+            <p class="suggest">test</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">0</p>
+            <p class="titlebox">test</p>
+            <p class="writer">test</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">test</p>
+            <p class="suggest">test</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">0</p>
+            <p class="titlebox">test</p>
+            <p class="writer">test</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">test</p>
+            <p class="suggest">test</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">0</p>
+            <p class="titlebox">test</p>
+            <p class="writer">test</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">test</p>
+            <p class="suggest">test</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">0</p>
+            <p class="titlebox">test</p>
+            <p class="writer">test</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">test</p>
+            <p class="suggest">test</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">0</p>
+            <p class="titlebox">test</p>
+            <p class="writer">test</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">test</p>
+            <p class="suggest">test</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">0</p>
+            <p class="titlebox">test</p>
+            <p class="writer">test</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">test</p>
+            <p class="suggest">test</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="ntwrvsbox">
+            <p class="numberbox">0</p>
+            <p class="titlebox">test</p>
+            <p class="writer">test</p>
+            <p class="regdate">25-11-12</p>
+            <p class="views">test</p>
+            <p class="suggest">test</p>
+          </div>
+          <hr />
+          <!-- postlist -->
+          <div class="postlistnumber">
+            <p>《〈 1 2 3 4 5 6 7 8 9 10 〉》</p>
           </div>
         </div>
+        <div class="postlistright"></div>
+        <div class="bastpostlist"></div>
+        <div class="goodpostlist"></div>
       </main>
       <div th:replace="~{fragments/footer :: footer}"></div>
     </div>
@@ -371,326 +386,6 @@
           },
         });
       }
-
-      const mockDB = [
-        // Page 1 data (18 items)
-        {
-          id: 1,
-          title: "Test0",
-          author: "Kurecat",
-          date: "11-10",
-          views: 27,
-          likes: 9,
-          content: "Test0 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 2,
-          title: "Test1",
-          author: "Kurecat",
-          date: "11-10",
-          views: 27,
-          likes: 9,
-          content: "Test1 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 3,
-          title: "Test2",
-          author: "Kurecat",
-          date: "11-10",
-          views: 27,
-          likes: 9,
-          content: "Test2 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 4,
-          title: "Test3",
-          author: "Kurecat",
-          date: "11-10",
-          views: 27,
-          likes: 9,
-          content: "Test3 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 5,
-          title: "Test4",
-          author: "Kurecat",
-          date: "11-10",
-          views: 27,
-          likes: 9,
-          content: "Test4 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 6,
-          title: "Test5",
-          author: "Admin",
-          date: "11-11",
-          views: 10,
-          likes: 2,
-          content: "Test5 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 7,
-          title: "Test6",
-          author: "User1",
-          date: "11-11",
-          views: 15,
-          likes: 3,
-          content: "Test6 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 8,
-          title: "Test7",
-          author: "Kurecat",
-          date: "11-11",
-          views: 30,
-          likes: 5,
-          content: "Test7 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 9,
-          title: "Test8",
-          author: "Tester",
-          date: "11-11",
-          views: 22,
-          likes: 1,
-          content: "Test8 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 10,
-          title: "Test9",
-          author: "Guest",
-          date: "11-11",
-          views: 19,
-          likes: 4,
-          content: "Test9 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 11,
-          title: "Test10",
-          author: "Kurecat",
-          date: "11-11",
-          views: 45,
-          likes: 8,
-          content: "Test10 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 12,
-          title: "Test11",
-          author: "Admin",
-          date: "11-11",
-          views: 12,
-          likes: 2,
-          content: "Test11 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 13,
-          title: "Test12",
-          author: "User2",
-          date: "11-12",
-          views: 5,
-          likes: 0,
-          content: "Test12 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 14,
-          title: "Test13",
-          author: "Kurecat",
-          date: "11-12",
-          views: 61,
-          likes: 12,
-          content: "Test13 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 15,
-          title: "Test14",
-          author: "User1",
-          date: "11-12",
-          views: 33,
-          likes: 7,
-          content: "Test14 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 16,
-          title: "Test15",
-          author: "Tester",
-          date: "11-12",
-          views: 28,
-          likes: 3,
-          content: "Test15 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 17,
-          title: "Test16",
-          author: "Guest",
-          date: "11-12",
-          views: 14,
-          likes: 1,
-          content: "Test16 게시물의 상세 내용입니다.",
-        },
-        {
-          id: 18,
-          title: "Test17",
-          author: "Kurecat",
-          date: "11-12",
-          views: 50,
-          likes: 10,
-          content: "Test17 게시물의 상세 내용입니다.",
-        },
-
-        // Page 2 data (example)
-        {
-          id: 19,
-          title: "Test18 (Page 2)",
-          author: "Admin",
-          date: "11-13",
-          views: 10,
-          likes: 2,
-          content: "페이지 2의 첫 번째 게시물입니다.",
-        },
-        {
-          id: 20,
-          title: "Test19 (Page 2)",
-          author: "User1",
-          date: "11-13",
-          views: 15,
-          likes: 3,
-          content: "페이지 2의 두 번째 게시물입니다.",
-        },
-      ];
-
-      // --- DOM 요소 ---
-      const postListView = document.getElementById("postListView");
-      const postDetailView = document.getElementById("postDetailView");
-      const postTableBody = document.getElementById("postTableBody");
-      const pagination = document.getElementById("pagination");
-      const backToListButton = document.getElementById("backToListButton");
-
-      // --- 함수 ---
-
-      /**
-       * 게시물 목록을 화면에 그리는 함수
-       * @param {number} page - 현재 페이지 번호
-       */
-      function renderPostList(page = 1) {
-        // 테이블 내용 초기화
-        postTableBody.innerHTML = "";
-
-        const postsPerPage = 18; // 페이지당 18개
-
-        // 실제라면 페이지에 맞는 데이터를 DB에서 가져옵니다.
-        // 여기서는 mockDB에서 데이터를 '시뮬레이션'합니다.
-        let pageData = [];
-        if (page === 1) {
-          pageData = mockDB.slice(0, postsPerPage); // 18개
-        } else {
-          // 다른 페이지를 위한 가짜 데이터 생성
-          for (let i = 1; i <= postsPerPage; i++) {
-            // 18개
-            const postId = (page - 1) * postsPerPage + i; // 18개 기준으로 ID 계산
-            pageData.push({
-              id: postId,
-              title: `Test${postId - 1} (Page ${page})`,
-              author: `Author ${page}`,
-              date: "11-12",
-              views: Math.floor(Math.random() * 50),
-              likes: Math.floor(Math.random() * 10),
-              content: `페이지 ${page}의 ${i}번째 게시물 상세 내용입니다.`,
-            });
-          }
-        }
-
-        // 테이블 행(row) 생성
-        pageData.forEach((post) => {
-          const tr = document.createElement("tr");
-          tr.className = "row-height";
-
-          tr.innerHTML = `
-                    <td class="col-number clickable post-link" data-id="${post.id}">${post.id}</td>
-                    <td class="col-title text-left pl-4 clickable post-link" data-id="${post.id}">${post.title}</td>
-                    <td class="col-author">${post.author}</td>
-                    <td class="col-date">${post.date}</td>
-                    <td class="col-views">${post.views}</td>
-                    <td class="col-likes">${post.likes}</td>
-                `;
-          postTableBody.appendChild(tr);
-        });
-
-        // 생성된 행에 클릭 이벤트 리스너 추가
-        document.querySelectorAll(".post-link").forEach((link) => {
-          link.addEventListener("click", (e) => {
-            const postId = e.target.getAttribute("data-id");
-            showPostDetail(postId);
-          });
-        });
-      }
-
-      /**
-       * 게시물 상세 정보를 표시하는 함수
-       * @param {string} postId - 표시할 게시물의 ID
-       */
-      function showPostDetail(postId) {
-        // ID로 mockDB에서 게시물 찾기 (실제로는 DB 쿼리)
-        // find()는 문자열과 숫자를 비교하기 위해 == 를 사용하거나, postId를 숫자로 변환합니다.
-        const post = mockDB.find((p) => p.id == postId) || { // 페이지네이션으로 생성된 임시 데이터 찾기
-          id: postId,
-          title: `Test${postId - 1} (Page ??)`,
-          author: `Author ?`,
-          date: "11-12",
-          views: Math.floor(Math.random() * 50),
-          likes: Math.floor(Math.random() * 10),
-          content: `ID ${postId}번 게시물의 상세 내용입니다. (동적으로 생성됨)`,
-        };
-
-        // 상세 뷰에 데이터 채우기
-        document.getElementById("detailTitle").textContent = post.title;
-        document.getElementById("detailAuthor").textContent = post.author;
-        document.getElementById("detailDate").textContent = post.date;
-        document.getElementById("detailViews").textContent = post.views;
-        document.getElementById("detailLikes").textContent = post.likes;
-        document.getElementById("detailContent").textContent = post.content;
-
-        // 뷰 전환
-        postListView.classList.add("hidden");
-        postDetailView.classList.remove("hidden");
-      }
-
-      /**
-       * 목록 뷰로 돌아가는 함수
-       */
-      function showListView() {
-        postDetailView.classList.add("hidden");
-        postListView.classList.remove("hidden");
-      }
-
-      // --- 이벤트 리스너 설정 ---
-
-      // "목록으로" 버튼 클릭
-      backToListButton.addEventListener("click", showListView);
-
-      // 페이지네이션 링크 클릭
-      pagination.addEventListener("click", (e) => {
-        e.preventDefault(); // a 태그 기본 동작 방지
-
-        const target = e.target;
-        if (target.classList.contains("page-link")) {
-          // 모든 링크에서 'active' 클래스 제거
-          pagination.querySelectorAll(".page-link").forEach((link) => {
-            link.classList.remove("active");
-          });
-
-          // 클릭된 링크에 'active' 클래스 추가
-          target.classList.add("active");
-
-          const page = target.getAttribute("data-page");
-          renderPostList(parseInt(page));
-        }
-      });
-
-      // --- 초기화 ---
-      // 페이지 로드 시 1페이지 목록을 그립니다.
-      document.addEventListener("DOMContentLoaded", () => {
-        renderPostList(1);
-      });
     </script>
   </body>
 </html>
